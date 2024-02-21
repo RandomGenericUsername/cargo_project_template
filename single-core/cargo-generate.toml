@@ -11,8 +11,6 @@ ram_origin= {type = "string", prompt = "Ram memory region origin/start"}
 ram_length= {type = "string", prompt = "Ram memory region length"}
 
 [template]
-sub_templates = ["single-core", "dual-core"]
-
 ignore = [
     "cargo-generate.toml",
     "cargo-generate-values.toml"
