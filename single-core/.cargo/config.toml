@@ -20,4 +20,3 @@ rustflags = [
   # "-C", "link-arg=-Wl,-Tlink.x",
   # "-C", "link-arg=-nostartfiles",
 ]
-

@@ -1,3 +1,11 @@
+[template]
+sub_templates = ["single-core", "dual-core"]
+ignore = [
+    "cargo-generate.toml",
+    "cargo-generate-values.toml"
+]
+
+
 [placeholders]
 gdb_degugger_option = { type = "string", prompt = "GDB debugger configuration" }
 target_architecture = { type = "string", prompt = "Target architecture" }

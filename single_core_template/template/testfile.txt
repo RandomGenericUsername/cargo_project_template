@@ -1,2 +1,0 @@
-{{project_name}}
-env var is {{PROJECT_NAME}}
