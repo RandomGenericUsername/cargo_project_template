@@ -7,7 +7,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            /* Configuration for the STM32F303 Discovery board */
+            /* Configuration for the {{mcu_target}} MCU */
             "type": "cortex-debug",
             "request": "launch",
             "name": "Debug (OpenOCD)",
@@ -15,15 +15,15 @@
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Cargo Build (debug)",
             "runToEntryPoint": "main",
-            "executable": "./target/{{target_architecture}}/debug/test",
+            "executable": "./target/{{target_architecture}}/debug/{{project_name}}",
             /* Run `cargo build --example itm` and uncomment this line to run itm example */
             // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
-            "device": "STM32F303VCT6",
+            "device": "{{mcu_target}}",
             "configFiles": [
-                "interface/stlink-v2-1.cfg",
-                "target/stm32f3x.cfg"
+                "interface/{{openocd_interface_cfg}}",
+                "target/{{openocd_target_cfg}}"
             ],
-            "svdFile": "${workspaceRoot}/.vscode/STM32F303.svd",
+            "svdFile": "${workspaceRoot}/.vscode/{{mcu_target}}.svd",
             "swoConfig": {
                 "enabled": true,
                 "cpuFrequency": 8000000,

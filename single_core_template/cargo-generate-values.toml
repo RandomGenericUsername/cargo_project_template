@@ -1,3 +1,12 @@
 [values]
 gdb_degugger_option="gdb-multiarch -q -x openocd.gdb"
 target_architecture="thumbv7em-none-eabi"
+mcu_target="stm32F411"
+project_name="Project name"
+openocd_interface_cfg="stlink.cfg"
+openocd_target_cfg="stm32f4x.cfg"
+flash_origin="0x8000000"
+flash_length="512K"
+ram_origin="0x20000000"
+ram_length="128K"
+extra_memory_sections=[""]

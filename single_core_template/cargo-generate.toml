@@ -1,3 +1,13 @@
 [placeholders]
 gdb_degugger_option = { type = "string", prompt = "GDB debugger configuration" }
 target_architecture = { type = "string", prompt = "Target architecture" }
+mcu_target = { type = "string", prompt = "MCU model" }
+project_name = { type = "string", prompt = "Project name" }
+openocd_interface_cfg= {type = "string", prompt = "stlink.cfg"}
+openocd_target_cfg= {type = "string", prompt = "stm32f4x.cfg"}
+flash_origin= {type = "string", prompt = "Flash memory region origin/start"}
+flash_length= {type = "string", prompt = "Flash memory region length"}
+ram_origin= {type = "string", prompt = "Ram memory region origin/start"}
+ram_length= {type = "string", prompt = "Ram memory region length"}
+extra_memory_sections = {type = "list", prompt = "list: Extra memory sections"}
+
