@@ -9,5 +9,4 @@ flash_origin= {type = "string", prompt = "Flash memory region origin/start"}
 flash_length= {type = "string", prompt = "Flash memory region length"}
 ram_origin= {type = "string", prompt = "Ram memory region origin/start"}
 ram_length= {type = "string", prompt = "Ram memory region length"}
-extra_memory_sections = {type = "list", prompt = "list: Extra memory sections"}
 

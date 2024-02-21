@@ -5,7 +5,6 @@ MEMORY
   /* These values correspond to the {{mcu_target}} */
   FLASH : ORIGIN = {{flash_origin}}, LENGTH = {{flash_length}}
   RAM : ORIGIN = {{ram_origin}}, LENGTH = {{ram_length}}
-  {{extra_memory_sections}}
 }
 
 /* This is where the call stack will be allocated. */
