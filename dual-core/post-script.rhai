@@ -1,5 +1,3 @@
-use rhai::{Engine, EvalAltResult};
-
 pub fn main() -> Result<(), Box<EvalAltResult>>
 //                          ^^^^^^^^^^^^^^^^^^
 //                          Rhai API error type
