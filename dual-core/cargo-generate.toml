@@ -1,3 +1,8 @@
+[hooks]
+#pre = ["pre-script.rhai"]
+#post = ["post-script.rhai"]
+
+
 [template]
 cargo_generate_version = ">=0.19.0"
 ignore = [
