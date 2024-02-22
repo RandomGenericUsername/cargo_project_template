@@ -1,6 +1,10 @@
 [template]
-sub_templates = ["single-core", "dual-core"]
+cargo_generate_version = ">=0.19.0"
+ignore = [
+    "cargo-generate.toml",
+    "cargo-generate-values.toml"
+]
 
 [placeholders]
-gdb_degugger_option = { type = "string", prompt = "GDB debugger configuration" }
-target_architecture = { type = "string", prompt = "Target architecture" }
+core_0 = { type = "string", prompt = "core 0 label", default = "cortex-m7" }
+core_1 = { type = "string", prompt = "core 1 label", default = "cortex-m4" }

@@ -1,0 +1,40 @@
+[package]
+name = {{project-name}} 
+version = "0.1.0"
+authors = [{{authors}}]
+edition = "2024"
+#rust-version = "?"
+#description = " "
+#documentation = "https://docs..."
+readme = "README.md"
+#homepage = "https://homepage...."
+#repository = "github.com/..."
+#license = "MIT"
+#license-file = "path-to-license"
+
+[workspace]
+members = [
+    {{core_0}},
+    {{core_0}},
+    shared
+]
+
+[dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+cortex-m-semihosting = "0.3.3"
+panic-halt = "0.2.0"
+rhai = "1.17.0"
+
+
+
+# this lets you use `cargo fix`!
+[[bin]]
+name = {{project-name}} 
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations

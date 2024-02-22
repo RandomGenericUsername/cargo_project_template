@@ -7,7 +7,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            /* Configuration for the {{mcu_target}} MCU */
+            /* Configuration for the {{target}} MCU */
             "type": "cortex-debug",
             "request": "launch",
             "name": "Debug (OpenOCD)",
@@ -18,12 +18,12 @@
             "executable": "./target/{{target_architecture}}/debug/{{project_name}}",
             /* Run `cargo build --example itm` and uncomment this line to run itm example */
             // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
-            "device": "{{mcu_target}}",
+            "device": "{{target}}",
             "configFiles": [
                 "interface/{{openocd_interface_cfg}}",
                 "target/{{openocd_target_cfg}}"
             ],
-            "svdFile": "${workspaceRoot}/.vscode/{{mcu_target}}.svd",
+            "svdFile": "${workspaceRoot}/.vscode/{{target}}.svd",
             "swoConfig": {
                 "enabled": true,
                 "cpuFrequency": 8000000,
