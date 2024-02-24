@@ -21,7 +21,14 @@ panic-halt = "0.2.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "{{project-name}}"
+name = "{{core_0}}"
+path = "{{core_0}}/src/main.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "{{core_1}}"
+path = "{{core_1}}/src/main.rs"
 test = false
 bench = false
 
