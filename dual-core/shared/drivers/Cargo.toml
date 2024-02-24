@@ -1,5 +1,5 @@
 [package]
-name = "Drivers"
+name = "drivers"
 version = "0.1.0"
 
 [lib]
