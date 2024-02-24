@@ -5,8 +5,8 @@ version = "0.1.0"
 # Dependency on the shared library
 [dependencies]
 cortex-m = "0.7.3" # Example dependency, adjust for your target architecture
-shared-utils = { path = "../shared/utils" }
-shared-drivers = { path = "../shared/drivers" }
+utils = { path = "../shared/utils" }
+drivers = { path = "../shared/drivers" }
 
 # This section specifies custom build scripts, if needed
 [build]
