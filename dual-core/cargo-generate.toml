@@ -25,16 +25,13 @@ openocd_interface_cfg_core_0 = {type = "string", prompt = "Select the openocd in
     ], default = "stlink.cfg" }
 
 openocd_target_cfg_core_1 = {type = "string", prompt = "Openocd core 1 target configuration.", default = "stm32f4x.cfg"}
-openocd_interface_cfg_core_1 = {type = "string", prompt = "Select the openocd interface configuration for core 1 -> Defaults to 'stlink.cfg'",
-    choices = [
+openocd_interface_cfg_core_1 = {type = "string", prompt = "Select the openocd interface configuration for core 1 -> Defaults to 'stlink.cfg'", choices = [
         "stlink.cfg",
         "stlink-v1.cfg",
         "stlink-v2.cfg",
         "stlink-v2-1.cfg",
         "stlink-dap.cfg"
-    ],
-    default = "stlink.cfg"
-}
+    ], default = "stlink.cfg" }
 
 
 flash_origin_core_0 = { type = "string", prompt = "core 0 flash memory origin", default = "0x08000000" }

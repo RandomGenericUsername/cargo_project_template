@@ -1,5 +1,22 @@
 [values]
-core_0 = "cortex-m7"
-core_1 = "cortex-m4"
+target="STM32H755ZI"
+gdb_debugger_option="gdb-multiarch -q -x openocd.gdb"
+core_0="cortex-m7"
+core_1="cortex-m4"
+target_architecture_core_0="thumbv7em-none-eabi"
+target_architecture_core_1="thumbv7em-none-eabi"
+openocd_target_cfg_core_0="stm32h7x_dual_bank.cfg"
+openocd_interface_cfg_core_0="stlink.cfg"
+openocd_target_cfg_core_1="stm32f4x.cfg"
+openocd_interface_cfg_core_1="stlink.cfg"
+flash_origin_core_0="0x08000000"
+flash_length_core_0="1024K"
+ram_origin_core_0="0x20000000"
+ram_length_core_0="128K"
+flash_origin_core_1="0x08100000"
+flash_length_core_1="1024K"
+ram_origin_core_1="0x08100000"
+ram_length_core_1="288K"
+
 
 
