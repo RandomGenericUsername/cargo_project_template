@@ -23,7 +23,8 @@ openocd_interface_cfg_core_0 = {type = "string", prompt = "Select the openocd in
         "stlink-v2.cfg",
         "stlink-v2-1.cfg",
         "stlink-dap.cfg"
-    ]
+    ],
+    default = "stlink.cfg"
 }
 
 openocd_target_cfg_core_1 = {type = "string", prompt = "Openocd core 1 target configuration.", default = "stm32f4x.cfg"}
@@ -34,7 +35,8 @@ openocd_interface_cfg_core_1 = {type = "string", prompt = "Select the openocd in
         "stlink-v2.cfg",
         "stlink-v2-1.cfg",
         "stlink-dap.cfg"
-    ]
+    ],
+    default = "stlink.cfg"
 }
 
 
