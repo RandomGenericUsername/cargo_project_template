@@ -10,6 +10,3 @@ impl Utils {
         println!("Utility function called");
     }
 }
-
-//lib.rs
-pub mod utils;
