@@ -21,4 +21,4 @@ rustflags = [
 ]
 
 [alias]
-"build all" = "build --workspace"
+"build-all" = "build --workspace"
