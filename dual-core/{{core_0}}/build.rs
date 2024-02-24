@@ -1,6 +1,3 @@
-explain then this to me:
-
-when i used cargo generate with the rstu supported cortex-m example, at the root of the project there is this build.rs file:
 //! This build script copies the `memory.x` file from the crate root into
 //! a directory where the linker can always find it at build time.
 //! For many projects this is optional, as the linker always searches the
