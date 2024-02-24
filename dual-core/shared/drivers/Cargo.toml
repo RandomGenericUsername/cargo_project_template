@@ -3,4 +3,4 @@ name = "drivers"
 version = "0.1.0"
 
 [lib]
-path = "src/lib.rs"
+path = "src/config.rs"
