@@ -1,8 +1,7 @@
 [package]
-name = {{project-name}} 
+name = "{{project-name}}"
 version = "0.1.0"
-authors = [{{authors}}]
-edition = "2024"
+authors = ["{{authors}}"]
 readme = "README.md"
 
 [workspace]
@@ -22,7 +21,7 @@ panic-halt = "0.2.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = {{project-name}} 
+name = "{{project-name}}"
 test = false
 bench = false
 

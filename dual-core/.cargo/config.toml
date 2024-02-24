@@ -1,7 +1,7 @@
 # General configurations applicable to all builds
 
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
-runner = {{gdb_debugger_option}}
+runner = "{{gdb_debugger_option}}"
 
 rustflags = [
   # Previously, the linker arguments --nmagic and -Tlink.x were set here.
