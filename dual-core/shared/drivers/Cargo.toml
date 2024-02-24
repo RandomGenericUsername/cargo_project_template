@@ -1,5 +1,5 @@
 [package]
-name = "shared"
+name = "Drivers"
 version = "0.1.0"
 
 [lib]
