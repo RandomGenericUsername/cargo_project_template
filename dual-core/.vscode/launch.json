@@ -10,7 +10,35 @@
             /* Configuration for the {{target}} MCU */
             "type": "cortex-debug",
             "request": "launch",
-            "name": "Debug (OpenOCD)",
+            "name": "Debug {{core_0}} (OpenOCD)",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "Cargo Build (debug)",
+            "runToEntryPoint": "main",
+            "executable": "./target/{{target_architecture_core_0}}/debug/{{project-name}}",
+            /* Run `cargo build --example itm` and uncomment this line to run itm example */
+            // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
+            "device": "{{target}}",
+            "configFiles": [
+                "interface/{{openocd_interface_cfg_core_0}}",
+                "target/{{openocd_target_cfg_core_0}}"
+            ],
+            "svdFile": "${workspaceRoot}/.vscode/{{target}}-{{core_0}}.svd",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 8000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
+        },
+        {
+            /* Configuration for the {{target}} MCU */
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug {{core_1}} (OpenOCD)",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Cargo Build (debug)",
