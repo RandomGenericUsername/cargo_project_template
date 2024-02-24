@@ -41,5 +41,3 @@ fn main() {
     // Set the linker script to the one provided by cortex-m-rt.
     println!("cargo:rustc-link-arg=-Tlink.x");
 }
-
-explain to me what it does, why is it needed and why didnt you suggested it?
