@@ -1,5 +1,5 @@
 [build]
-target = {{core_1_arch}}
+target = "{{core_1_arch}}"
 
 ### Uncomment this to override global settings
 #[target.'cfg(all(target_arch = "arm", target_os = "none"))']
