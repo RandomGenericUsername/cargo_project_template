@@ -7,13 +7,13 @@ ignore = [
 
 [placeholders]
 target = { type = "string", prompt = "MCU brand/model", default = "STM32H755ZI" }
-gdb_debugger_option = { type = "string", prompt = "GDB debugger configuration",
-    choices = [ 
-        "arm-none-eabi-gdb -q -x openocd.gdb", 
-        "gdb-multiarch -q -x openocd.gdb", 
-        "gdb -q -x openocd.gdb"
-    ],
-    default = "gdb-multiarch -q -x openocd.gdb"
+gdb_debugger_option = { type = "string", prompt = "GDB debugger configuration", \
+    choices = [ \
+        "arm-none-eabi-gdb -q -x openocd.gdb", \
+        "gdb-multiarch -q -x openocd.gdb", \
+        "gdb -q -x openocd.gdb" \
+    ], \
+    default = "gdb-multiarch -q -x openocd.gdb" \
 }
 
 core_0 = { type = "string", prompt = "core 0 label", default = "cortex-m7" }
