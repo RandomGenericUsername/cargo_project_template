@@ -10,6 +10,3 @@ impl Drivers {
         println!("Utility function called");
     }
 }
-
-//lib.rs
-pub mod drivers;
