@@ -1,9 +1,9 @@
-// shared/src/utils.rs
-pub struct Utils;
+// shared/src/Drivers.rs
+pub struct Drivers;
 
-impl Utils {
+impl Drivers {
     pub fn new() -> Self {
-        Utils
+        Drivers
     }
 
     pub fn utility_function(&self) {
@@ -12,4 +12,4 @@ impl Utils {
 }
 
 //lib.rs
-pub mod utils;
+pub mod drivers;
