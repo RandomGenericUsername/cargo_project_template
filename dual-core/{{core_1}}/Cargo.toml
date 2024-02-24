@@ -1,7 +1,6 @@
 [package]
-name = {{core_1}} 
+name = "{{core_1}}"
 version = "0.1.0"
-edition = "2024"
 
 # Dependency on the shared library
 [dependencies]

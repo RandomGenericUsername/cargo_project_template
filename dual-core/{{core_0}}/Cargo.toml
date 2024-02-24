@@ -1,7 +1,6 @@
 [package]
-name = {{core_0}} 
+name = "{{core_0}}"
 version = "0.1.0"
-edition = "2024"
 
 [dependencies]
 cortex-m = "0.7.3" # Example dependency, adjust for your target architecture
