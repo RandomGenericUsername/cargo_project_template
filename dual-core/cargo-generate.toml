@@ -1,7 +1,3 @@
-[hooks]
-post = ["post-script.rhai"]
-
-
 [template]
 cargo_generate_version = ">=0.19.0"
 ignore = [
@@ -10,5 +6,51 @@ ignore = [
 ]
 
 [placeholders]
+target = { type = "string", prompt = "MCU brand/model", default = "STM32H755ZI" }
+gdb_debugger_option = { type = "string", prompt = "GDB debugger configuration",
+    choices = [ 
+        "arm-none-eabi-gdb -q -x openocd.gdb", 
+        "gdb-multiarch -q -x openocd.gdb", 
+        "gdb -q -x openocd.gdb"
+    ],
+    default = "gdb-multiarch -q -x openocd.gdb"
+}
+
 core_0 = { type = "string", prompt = "core 0 label", default = "cortex-m7" }
 core_1 = { type = "string", prompt = "core 1 label", default = "cortex-m4" }
+
+target_architecture_core_0 = { type = "string", prompt = "Core 0 target architecture", default = "thumbv7em-none-eabi" }
+target_architecture_core_1 = { type = "string", prompt = "Core 1 target architecture", default = "thumbv7em-none-eabi" }
+
+openocd_target_cfg_core_0 = {type = "string", prompt = "Openocd core 0 target configuration.", default = "stm32h7x_dual_bank.cfg"}
+openocd_interface_cfg_core_0 = {type = "string", prompt = "Select the openocd interface configuration for core 0 -> Defaults to 'stlink.cfg'",
+    choices = [
+        "stlink.cfg",
+        "stlink-v1.cfg",
+        "stlink-v2.cfg",
+        "stlink-v2-1.cfg",
+        "stlink-dap.cfg"
+    ]
+}
+
+openocd_target_cfg_core_1 = {type = "string", prompt = "Openocd core 1 target configuration.", default = "stm32f4x.cfg"}
+openocd_interface_cfg_core_1 = {type = "string", prompt = "Select the openocd interface configuration for core 1 -> Defaults to 'stlink.cfg'",
+    choices = [
+        "stlink.cfg",
+        "stlink-v1.cfg",
+        "stlink-v2.cfg",
+        "stlink-v2-1.cfg",
+        "stlink-dap.cfg"
+    ]
+}
+
+
+flash_origin_core_0 = { type = "string", prompt = "core 0 flash memory origin", default = "0x08000000" }
+flash_length_core_0 = { type = "string", prompt = "core 0 flash memory length", default = "1024K" }
+ram_origin_core_0 = { type = "string", prompt = "core 0 ram memory origin", default = "0x20000000" }
+ram_length_core_0 = { type = "string", prompt = "core 0 ram memory length", default = "128K" }
+
+flash_origin_core_1 = { type = "string", prompt = "core 1 flash memory origin", default = "0x08100000" }
+flash_length_core_1 = { type = "string", prompt = "core 1 flash memory length", default = "1024K" }
+ram_origin_core_1 = { type = "string", prompt = "core 1 ram memory origin", default = "0x08100000" }
+ram_length_core_1 = { type = "string", prompt = "core 1 ram memory length", default = "288K" }

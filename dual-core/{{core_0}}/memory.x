@@ -1,8 +1,7 @@
 MEMORY
 {
   /* NOTE 1 K = 1 KiBi = 1024 bytes */
-  /* TODO Adjust these memory regions to match your device memory layout */
-  /* These values correspond to the {{target}} */
-  FLASH : ORIGIN = {{flash_origin}}, LENGTH = {{flash_length}}
-  RAM : ORIGIN = {{ram_origin}}, LENGTH = {{ram_length}}
+  /* These values correspond to the {{target}} MCU */
+  FLASH : ORIGIN = {{flash_origin_core_0}}, LENGTH = {{flash_length_core_0}}
+  RAM : ORIGIN = {{ram_origin_core_0}}, LENGTH = {{ram_length_core_0}}
 }

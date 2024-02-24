@@ -1,8 +1,14 @@
 [package]
-name = {{core_0}} 
+name = {{core_1}} 
 version = "0.1.0"
 edition = "2024"
 
 # Dependency on the shared library
 [dependencies]
-shared = { path = "../shared" }
+cortex-m = "0.7.3" # Example dependency, adjust for your target architecture
+shared-utils = { path = "../shared/utils" }
+shared-drivers = { path = "../shared/drivers" }
+
+# This section specifies custom build scripts, if needed
+[build]
+script = "build.rs"
