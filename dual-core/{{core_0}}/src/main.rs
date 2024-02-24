@@ -1,11 +1,5 @@
-use shared::{config::Config, utils::Utils};
+use calculator;
 
 fn main() {
-    let utils = Utils::new();
-    utils.utility_function();
-
-    let config = Config::new();
-    config.configure();
-
-    println!("Core0 Main Program");
+    println!("hola {}", calculator::add(4,5))    
 }
