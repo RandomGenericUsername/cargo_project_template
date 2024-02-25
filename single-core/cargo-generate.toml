@@ -9,21 +9,15 @@ ignore = [
 target = { type = "string", prompt = "MCU model/brand/family" }
 target_architecture = { type = "string", prompt = "Target architecture" }
 openocd_target_cfg= {type = "string", prompt = "openocd target configuration."}
-openocd_interface_cfg= {type = "string", prompt = "Select the interface configuration for openocd -> Defaults to 'stlink.cfg'",
-    choices = [
+openocd_interface_cfg= {type = "string", prompt = "Select the interface configuration for openocd -> Defaults to 'stlink.cfg'", choices = [
         "stlink.cfg",
         "stlink-v1.cfg",
         "stlink-v2.cfg",
         "stlink-v2-1.cfg",
         "stlink-dap.cfg"
-    ]
-}
-gdb_degugger_option = { type = "string", prompt = "GDB debugger configuration",
-    choices = [ 
-        "arm-none-eabi-gdb -q -x openocd.gdb", 
-        "gdb-multiarch -q -x openocd.gdb", 
-        "gdb -q -x openocd.gdb"
-    ], default = "gdb-multiarch -q -x openocd.gdb" }
+    ], default = "stlink.cfg" }
+gdb_debugger_option = { type = "string", prompt = "GDB debugger configuration", choices = [ "arm-none-eabi-gdb -q -x openocd.gdb", "gdb-multiarch -q -x openocd.gdb", "gdb -q -x openocd.gdb" ], default = "gdb-multiarch -q -x openocd.gdb" }
+
 
 flash_origin= {type = "string", prompt = "Flash memory region origin/start"}
 flash_length= {type = "string", prompt = "Flash memory region length"}
