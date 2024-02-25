@@ -20,6 +20,24 @@ debug = true # symbols are nice and they don't increase the size on Flash
 lto = true # better optimizations
 #opt-level = 3  # Full optimizations
 
+[{{target_architecture_core_0}}.build]
+script = "build.rs"
+
+[{{target_architecture_core_1}}.build]
+script = "build.rs"
+
+[{{target_architecture_core_0}}.dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+cortex-m-semihosting = "0.3.3"
+panic-halt = "0.2.0"
+
+[{{target_architecture_core_1}}.dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+cortex-m-semihosting = "0.3.3"
+panic-halt = "0.2.0"
+
 [[bin]]
 name = "{{core_0}}"
 path = "{{core_0}}/src/main.rs"
