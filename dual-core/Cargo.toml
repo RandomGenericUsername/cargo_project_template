@@ -8,13 +8,10 @@ readme = "README.md"
 members = [ 
     "{{core_0}}",
     "{{core_1}}",
-    "shared/greeter", 
 ]
-
 
 [profile.dev]
 opt-level = 0  # No optimizations, full debug info
-
 
 [profile.release]
 codegen-units = 1 # better optimizations
