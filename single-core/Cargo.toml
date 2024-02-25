@@ -2,7 +2,7 @@
 authors = ["Juan David Tangarife Hernandez <jdavidth.01@gmail.com>"]
 edition = "2018"
 readme = "README.md"
-name = "awesome"
+name = "{{project-name}}"
 version = "0.0.1"
 
 [dependencies]
@@ -14,7 +14,7 @@ panic-halt = "0.2.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "awesome"
+name = "{{project-name}}"
 test = false
 bench = false
 
