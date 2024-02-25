@@ -8,7 +8,7 @@ readme = "README.md"
 members = [ 
     "{{core_0}}",
     "{{core_1}}",
-    "shared/utils/greeter", 
+    "shared/greeter", 
 ]
 
 
