@@ -1,5 +1,5 @@
-use greeter;
+use greeter::greets;
 
 fn main() {
-    println!("hola {}", calculator::add(4,5))    
+    greets::say_hi("Thompson");
 }

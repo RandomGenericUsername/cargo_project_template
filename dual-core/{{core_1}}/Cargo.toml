@@ -12,3 +12,9 @@ panic-halt = "0.2.0"
 # This section specifies custom build scripts, if needed
 [build]
 script = "build.rs"
+
+[[bin]]
+name = "{{core_1}}"
+path = "src/main.rs"
+test = false
+bench = false

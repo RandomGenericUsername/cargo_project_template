@@ -12,19 +12,6 @@ members = [
 ]
 
 
-# this lets you use `cargo fix`!
-[[bin]]
-name = "{{core_0}}"
-path = "{{core_0}}/src/main.rs"
-test = false
-bench = false
-
-[[bin]]
-name = "{{core_1}}"
-path = "{{core_1}}/src/main.rs"
-test = false
-bench = false
-
 [profile.dev]
 opt-level = 0  # No optimizations, full debug info
 
