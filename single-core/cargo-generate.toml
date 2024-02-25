@@ -23,9 +23,8 @@ gdb_degugger_option = { type = "string", prompt = "GDB debugger configuration",
         "arm-none-eabi-gdb -q -x openocd.gdb", 
         "gdb-multiarch -q -x openocd.gdb", 
         "gdb -q -x openocd.gdb"
-    ],
-    default = "gdb-multiarch -q -x openocd.gdb"
-}
+    ], default = "gdb-multiarch -q -x openocd.gdb" }
+
 flash_origin= {type = "string", prompt = "Flash memory region origin/start"}
 flash_length= {type = "string", prompt = "Flash memory region length"}
 ram_origin= {type = "string", prompt = "Ram memory region origin/start"}
