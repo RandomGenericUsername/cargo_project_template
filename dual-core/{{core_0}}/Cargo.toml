@@ -8,6 +8,7 @@ cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.3"
 panic-halt = "0.2.0"
+greeter = { path = "../shared/greeter" }
 
 # This section specifies custom build scripts, if needed
 [build]
@@ -17,5 +18,5 @@ script = "build.rs"
 [[bin]]
 name = "{{core_0}}"
 path = "src/main.rs"
-test = false
-bench = false
+#test = false
+#bench = false

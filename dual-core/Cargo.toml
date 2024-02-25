@@ -8,6 +8,7 @@ readme = "README.md"
 members = [ 
     "{{core_0}}",
     "{{core_1}}",
+    "shared/greeter", 
 ]
 
 [profile.dev]
@@ -19,4 +20,14 @@ debug = true # symbols are nice and they don't increase the size on Flash
 lto = true # better optimizations
 #opt-level = 3  # Full optimizations
 
+[[bin]]
+name = "{{core_0}}"
+path = "core_0/src/main.rs"
+#test = false
+#bench = false
 
+[[bin]]
+name = "{{core_1}}"
+path = "core_1/src/main.rs"
+#test = false
+#bench = false
