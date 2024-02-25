@@ -5,11 +5,10 @@ authors = ["{{authors}}"]
 readme = "README.md"
 
 [workspace]
-members = [
+members = [ 
     "{{core_0}}",
     "{{core_1}}",
-    "shared/drivers",
-    "shared/utils",
+    "shared/utils/calculator",
 ]
 
 
@@ -18,8 +17,7 @@ cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.3"
 panic-halt = "0.2.0"
-drivers = {path = "shared/drivers"}
-utils = {path = "shared/utils"}
+calculator = {path = "shared/utils/calculator"}
 
 # this lets you use `cargo fix`!
 [[bin]]

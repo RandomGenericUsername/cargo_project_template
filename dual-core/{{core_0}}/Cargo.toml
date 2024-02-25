@@ -1,12 +1,3 @@
 [package]
 name = "{{core_0}}"
 version = "0.1.0"
-
-[dependencies]
-cortex-m = "0.7.3" # Example dependency, adjust for your target architecture
-utils = { path = "../shared/utils" }
-drivers = { path = "../shared/drivers" }
-
-# This section specifies custom build scripts, if needed
-[build]
-script = "build.rs"
