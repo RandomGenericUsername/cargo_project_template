@@ -1,7 +1,9 @@
 # General configurations applicable to all builds
-
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
 runner = "{{gdb_debugger_option}}"
+
+[alias]
+"build-all" = "build --workspace"
 
 rustflags = [
   # Previously, the linker arguments --nmagic and -Tlink.x were set here.
@@ -11,7 +13,7 @@ rustflags = [
   # By default, the LLD linker is used, which is shipped with the Rust
   # toolchain. If you run into problems with LLD, you can switch to the
   # GNU linker by uncommenting this line:
-  "-C", "linker=arm-none-eabi-ld",
+  # "-C", "linker=arm-none-eabi-ld",
 
   # If you need to link to pre-compiled C libraries provided by a C toolchain
   # use GCC as the linker by uncommenting the three lines below:
@@ -20,5 +22,3 @@ rustflags = [
   # "-C", "link-arg=-nostartfiles",
 ]
 
-[alias]
-"build-all" = "build --workspace"
