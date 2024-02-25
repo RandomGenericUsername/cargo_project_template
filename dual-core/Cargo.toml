@@ -22,12 +22,12 @@ lto = true # better optimizations
 
 [[bin]]
 name = "{{core_0}}"
-path = "core_0/src/main.rs"
+path = "{{core_0}}/src/main.rs"
 #test = false
 #bench = false
 
 [[bin]]
 name = "{{core_1}}"
-path = "core_1/src/main.rs"
+path = "{{core_1}}/src/main.rs"
 #test = false
 #bench = false
