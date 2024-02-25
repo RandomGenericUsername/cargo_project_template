@@ -1,3 +1,4 @@
+### Build configurations
 [build]
 target = "{{target_architecture_core_1}}"
 

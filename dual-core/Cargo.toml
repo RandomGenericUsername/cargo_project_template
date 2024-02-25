@@ -1,9 +1,11 @@
+### Package info
 [package]
 name = "{{project-name}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
 readme = "README.md"
 
+### Workspaces
 [workspace]
 members = [ 
     "{{core_0}}",
@@ -11,37 +13,21 @@ members = [
     "shared/greeter", 
 ]
 
+### core_0 bin config
+[[bin]]
+name = "{{core_0}}"
+path = "{{core_0}}/src/main.rs"
+### core_1 bin config
+[[bin]]
+name = "{{core_1}}"
+path = "{{core_1}}/src/main.rs"
+
+### Debug build config
 [profile.dev]
 opt-level = 0  # No optimizations, full debug info
 
+### Release build config
 [profile.release]
 codegen-units = 1 # better optimizations
 debug = true # symbols are nice and they don't increase the size on Flash
 lto = true # better optimizations
-#opt-level = 3  # Full optimizations
-
-[{{target_architecture_core_0}}.build]
-script = "build.rs"
-
-[{{target_architecture_core_1}}.build]
-script = "build.rs"
-
-[{{target_architecture_core_0}}.dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.10"
-cortex-m-semihosting = "0.3.3"
-panic-halt = "0.2.0"
-
-[{{target_architecture_core_1}}.dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.10"
-cortex-m-semihosting = "0.3.3"
-panic-halt = "0.2.0"
-
-[[bin]]
-name = "{{core_0}}"
-path = "{{core_0}}/src/main.rs"
-
-[[bin]]
-name = "{{core_1}}"
-path = "{{core_1}}/src/main.rs"
