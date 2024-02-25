@@ -19,15 +19,6 @@ cortex-m-rt = "0.6.10"
 panic-halt = "0.2.0"
 cortex-m-semihosting = "0.3.3" # un-comment to enable semihosting
 
-### core_0 bin config
-[[bin]]
-name = "{{core_0}}"
-path = "{{core_0}}/src/main.rs"
-### core_1 bin config
-[[bin]]
-name = "{{core_1}}"
-path = "{{core_1}}/src/main.rs"
-
 ### Debug build config
 [profile.dev]
 opt-level = 0  # No optimizations, full debug info

@@ -11,3 +11,7 @@ cortex-m-rt.workspace = true
 panic-halt.workspace = true 
 #cortex-m-semihosting.workspace = true #un-comment to enable semihosting
 
+### {{core_1}} bin config
+[[bin]]
+name = "{{core_1}}"
+path = "src/main.rs"
