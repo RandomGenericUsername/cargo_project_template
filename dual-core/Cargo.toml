@@ -8,16 +8,9 @@ readme = "README.md"
 members = [ 
     "{{core_0}}",
     "{{core_1}}",
-    "shared/utils/calculator",
+    "shared/utils/greeter", 
 ]
 
-
-[dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.10"
-cortex-m-semihosting = "0.3.3"
-panic-halt = "0.2.0"
-calculator = {path = "shared/utils/calculator"}
 
 # this lets you use `cargo fix`!
 [[bin]]
