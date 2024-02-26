@@ -10,7 +10,7 @@ extern crate cortex_m;
 use cortex_m::asm;
 extern crate cortex_m_rt as rt;
 use rt::entry;
-extern create greeter;
+extern crate greeter;
 
 #[entry]
 fn main() -> ! {

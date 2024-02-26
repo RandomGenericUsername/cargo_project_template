@@ -18,6 +18,7 @@ cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 panic-halt = "0.2.0"
 cortex-m-semihosting = "0.3.3" # un-comment to enable semihosting
+greeter = { path = "shared/greeter", version = "*" }
 
 ### Debug build config
 [profile.dev]
