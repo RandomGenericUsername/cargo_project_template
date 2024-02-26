@@ -1,17 +1,8 @@
 [alias]
 "b0" = "build -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
 "b1" = "build -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"b" = "build -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}} -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
 "c0" = "check -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
 "c1" = "check -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"c" = "check -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}} -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"t0" = "test -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
-"t1" = "test -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"t" = "test -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}} -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"r0" = "run -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
-"r1" = "run -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"r" = "run -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}} -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-
 
 # General configurations applicable to all builds
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
