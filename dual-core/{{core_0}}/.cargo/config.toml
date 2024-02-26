@@ -8,7 +8,7 @@ rr = "run --release"
 ### Build configurations
 [build]
 target = "{{target_architecture_core_0}}"
-target-dir = "../target/{{target_architecture_core_0}}-{{core_0}}"
+target-dir = "../target/{{core_0}}"
 
 ### Uncomment this to override global settings
 #[target.'cfg(all(target_arch = "arm", target_os = "none"))']

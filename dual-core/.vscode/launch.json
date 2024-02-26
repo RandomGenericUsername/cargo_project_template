@@ -13,9 +13,9 @@
             "name": "Debug {{core_0}} (OpenOCD)",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": "Cargo Build (debug)",
+            "preLaunchTask": "Cargo Build {{core_0}} (debug)",
             "runToEntryPoint": "main",
-            "executable": "./target/{{target_architecture_core_0}}/debug/{{project-name}}",
+            "executable": "./target/{{core_0}}/{{target_architecture_core_0}}/debug/{{core_0}}",
             /* Run `cargo build --example itm` and uncomment this line to run itm example */
             // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
             "device": "{{target}}",
@@ -41,9 +41,9 @@
             "name": "Debug {{core_1}} (OpenOCD)",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": "Cargo Build (debug)",
+            "preLaunchTask": "Cargo Build {{core_1}} (debug)",
             "runToEntryPoint": "main",
-            "executable": "./target/{{target_architecture_core_1}}/debug/{{project_name}}",
+            "executable": "./target/{{core_1}}/{{target_architecture_core_1}}/debug/{{core_1}}",
             /* Run `cargo build --example itm` and uncomment this line to run itm example */
             // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
             "device": "{{target}}",
