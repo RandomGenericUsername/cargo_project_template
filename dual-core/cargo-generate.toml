@@ -1,6 +1,5 @@
 [template]
 cargo_generate_version = ">=0.19.0" 
-include = ["examples"]
 ignore = [
     "cargo-generate.toml", # Ignore this to not include in the template generation
     "cargo-generate-values.toml" # Ignore this to not include in the template generation
