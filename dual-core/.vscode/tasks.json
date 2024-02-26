@@ -35,6 +35,18 @@
             }
         },
         {
+            "label": "Cargo Build all (Debug)",
+            "type": "shell",
+            "command": "cargo b0 && cargo b1",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": "build",
+            "linux": {
+                "command": "cargo b0 && cargo b1"
+            },
+        },
+        {
             "label": "Cargo Build (release)",
             "type": "process",
             "command": "cargo",
