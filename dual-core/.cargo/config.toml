@@ -1,8 +1,8 @@
 [alias]
-"b0" = "build -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
-"b1" = "build -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
-"c0" = "check -p {{core_0}} --target {{target_architecture_core_0}} --target-dir {{target_architecture_core_0}}-{{core_0}}"
-"c1" = "check -p {{core_1}} --target {{target_architecture_core_1}} --target-dir {{target_architecture_core_1}}-{{core_1}}"
+"b0" = "build -p {{core_0}} --target {{target_architecture_core_0}} --target-dir target/{{target_architecture_core_0}}-{{core_0}}"
+"b1" = "build -p {{core_1}} --target {{target_architecture_core_1}} --target-dir target/{{target_architecture_core_1}}-{{core_1}}"
+"c0" = "check -p {{core_0}} --target {{target_architecture_core_0}} --target-dir target/{{target_architecture_core_0}}-{{core_0}}"
+"c1" = "check -p {{core_1}} --target {{target_architecture_core_1}} --target-dir target/{{target_architecture_core_1}}-{{core_1}}"
 
 # General configurations applicable to all builds
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']

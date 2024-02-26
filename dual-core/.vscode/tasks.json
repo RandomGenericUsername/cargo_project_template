@@ -4,11 +4,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            /*
-             * This is the default cargo build task,
-             * but we need to provide a label for it,
-             * so we can invoke it from the debug launcher.
-             */
             "label": "Cargo Build {{core_0}} (debug)",
             "type": "process",
             "command": "cargo",
@@ -47,14 +42,42 @@
             },
         },
         {
-            "label": "Cargo Build (release)",
+            "label": "Cargo Build {{core_0}} (Release)",
             "type": "process",
             "command": "cargo",
-            "args": ["build", "--release"],
+            "args": ["b0", "--release"],
             "problemMatcher": [
                 "$rustc"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Cargo Build {{core_1}} (Release)",
+            "type": "process",
+            "command": "cargo",
+            "args": ["b1", "--release"],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Cargo Build all (Release)",
+            "type": "shell",
+            "command": "cargo b0 --release && cargo b1 --release",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": "build",
+            "linux": {
+                "command": "cargo b0 --release && cargo b1 --release"
+            },
         },
         {
             "label": "Cargo Clean",
