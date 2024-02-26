@@ -4,6 +4,7 @@ members = [
     "{{core_0}}",
     "{{core_1}}",
     "shared/greeter", 
+    "examples"
 ]
 default-members = ["{{core_0}}"]
 resolver = "2"
