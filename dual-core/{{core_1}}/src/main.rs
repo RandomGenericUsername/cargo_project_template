@@ -6,9 +6,10 @@ extern crate panic_halt;
 // use panic_abort as _; // requires nightly
 // use panic_itm as _; // logs messages over ITM; requires ITM support
 // use panic_semihosting as _; // logs messages to the host stderr; requires a debugger
-
+extern crate cortex_m;
 use cortex_m::asm;
-use cortex_m_rt::entry;
+extern crate cortex_m_rt as rt;
+use rt::entry;
 
 #[entry]
 fn main() -> ! {
