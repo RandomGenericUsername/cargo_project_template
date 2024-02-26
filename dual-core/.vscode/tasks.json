@@ -9,10 +9,23 @@
              * but we need to provide a label for it,
              * so we can invoke it from the debug launcher.
              */
-            "label": "Cargo Build (debug)",
+            "label": "Cargo Build {{core_0}} (debug)",
             "type": "process",
             "command": "cargo",
-            "args": ["build"],
+            "args": ["b0"],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Cargo Build {{core_1}} (debug)",
+            "type": "process",
+            "command": "cargo",
+            "args": ["b1"],
             "problemMatcher": [
                 "$rustc"
             ],
