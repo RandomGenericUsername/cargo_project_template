@@ -9,7 +9,7 @@ description.workspace = true
 cortex-m.workspace = true 
 cortex-m-rt.workspace = true 
 panic-halt.workspace = true 
-#cortex-m-semihosting.workspace = true #un-comment to enable semihosting
+cortex-m-semihosting.workspace = true #un-comment to enable semihosting
 
 ### {{core_1}} bin config
 [[bin]]
