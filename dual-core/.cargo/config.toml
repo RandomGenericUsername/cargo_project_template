@@ -1,8 +1,7 @@
 [alias]
-b = "build --workspace"
-c = "check --workspace"
-t = "test --workspace"
-r = "run --workspace"
+"c0" = "cargo build {{core_0}} --target {{target_architecture_core_0}}"
+"c1" = "cargo build {{core_1}} --target {{target_architecture_core_1}}"
+
 
 # General configurations applicable to all builds
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
