@@ -4,6 +4,9 @@ MEMORY
   /* These values correspond to the {{target}} MCU */
   FLASH : ORIGIN = {{flash_origin_core_0}}, LENGTH = {{flash_length_core_0}}
   RAM : ORIGIN = {{ram_origin_core_0}}, LENGTH = {{ram_length_core_0}}
+  {% if extra_memory_sections_core_0 != "" %}
+  {{ extra_memory_sections_core_0 }}
+  {% endif %}
 }
 
 

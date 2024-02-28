@@ -17,6 +17,6 @@ flash_origin_core_1="0x08100000"
 flash_length_core_1="1024K"
 ram_origin_core_1="0x08100000"
 ram_length_core_1="288K"
-
+extra_memory_sections_core_0=" ITC_RAM : ORIGIN = 0x00000000,  LENGTH = 56k\n  ITC_RAM : ORIGIN = 0x00000000,   LENGTH = 56k"
 
 

@@ -4,6 +4,9 @@ MEMORY
   /* These values correspond to the {{target}} MCU */
   FLASH : ORIGIN = {{flash_origin_core_1}}, LENGTH = {{flash_length_core_1}}
   RAM : ORIGIN = {{ram_origin_core_1}}, LENGTH = {{ram_length_core_1}}
+  {% if extra_memory_sections_core_1 != "" %}
+  {{ extra_memory_sections_core_1 }}
+  {% endif %}
 }
 
 /* This is where the call stack will be allocated. */
